@@ -25,8 +25,7 @@ import com.zaxxer.hikari.util.FastList;
  * JDBC interfaces.
  *
  * @author Brett Wooldridge
- */
-@SuppressWarnings("unused")
+ */ 
 public final class ProxyFactory
 {
    private ProxyFactory()

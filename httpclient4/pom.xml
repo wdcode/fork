@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.weicoder</groupId>
+		<artifactId>build</artifactId>
+		<version>1.1</version>
+	</parent>
+	<groupId>com.weicoder.fork</groupId>
+	<artifactId>httpclient4</artifactId>
+	<version>4.5.12</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.weicoder.fork</groupId>
+			<artifactId>log4j-jdk11</artifactId>
+			<version>2.13.1</version>
+		</dependency>
+	</dependencies>
+</project>

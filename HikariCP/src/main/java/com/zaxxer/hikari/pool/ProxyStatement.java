@@ -39,8 +39,7 @@ public abstract class ProxyStatement implements Statement
       this.connection = connection;
       this.delegate = statement;
    }
-
-   @SuppressWarnings("unused")
+ 
    final SQLException checkException(SQLException e)
    {
       return connection.checkException(e);

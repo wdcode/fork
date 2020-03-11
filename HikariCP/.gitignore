@@ -8,8 +8,7 @@ dependency-reduced-pom.xml
 .DS_Store
 
 **/*.iml
-
-*.class
+ 
 *.jar
 *.war
 *.ear

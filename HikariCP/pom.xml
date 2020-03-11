@@ -4,24 +4,22 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.weicoder</groupId>
-		<artifactId>weicoder</artifactId>
-		<version>3.2.3</version>
+		<artifactId>build</artifactId>
+		<version>1.1</version>
 	</parent>
-	<!-- 
-	<groupId>com.zaxxer</groupId>
-	 -->
+	<groupId>com.weicoder.fork</groupId>
 	<artifactId>HikariCP-jdk11</artifactId>
 	<version>3.4.2</version>
- 
+
 	<build>
 		<plugins>
-			<plugin> 
+			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.6.0</version>
 				<executions>
 					<execution>
-						<phase>compile</phase> 
+						<phase>compile</phase>
 						<goals>
 							<goal>java</goal>
 						</goals>
@@ -30,19 +28,55 @@
 				<configuration>
 					<mainClass>com.zaxxer.hikari.util.JavassistProxyFactory</mainClass>
 				</configuration>
-			</plugin> 
-		</plugins> 
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.mojo
+										</groupId>
+										<artifactId>
+											exec-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.6.0,)
+										</versionRange>
+										<goals>
+											<goal>java</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
+			<groupId>com.weicoder.fork</groupId>
+			<artifactId>log4j-jdk11</artifactId>
+			<version>2.13.1</version>
 		</dependency>
 		<dependency>
-			<groupId>org.javassist</groupId>
-			<artifactId>javassist</artifactId>
-			<version>3.26.0-GA</version> 
+			<groupId>com.weicoder.fork</groupId>
+			<artifactId>javassist-jdk11</artifactId>
+			<version>3.26.0</version>
 		</dependency>
 	</dependencies>
 </project>
